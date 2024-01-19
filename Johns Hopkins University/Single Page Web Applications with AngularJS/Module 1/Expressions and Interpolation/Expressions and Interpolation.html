@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="msgApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="../../../../AngularJS/1.8.2/angular.min.js"></script>
+		<script src="./angularApp.js"></script>
+		<title>Expressions and Interpolation</title>
+	</head>
+	<body>
+		<h1>Expressions and Interpolation</h1>
+		<div ng-controller="msgAppController">
+			<div>
+				<h2>Part 1</h2>
+				<p>Message is: {{message}}</p>
+				<p>The previous message was interpolated from from the <em>message</em> property defined in the <em>$scope</em> service of AngularJS.</p>
+				<p>This next one is going to be invoked from a function call: {{displayMessage()}}</p>
+			</div>
+			<div>
+				<h2>Part 2</h2>
+				<p>What would be your favorite landscape?</p>
+				<p><input type="radio" id="beach" name="favoriteLandscape" ng-click="selectFavoriteLandscape('beach');"><label for="beach">Beach</label></p>
+				<p><input type="radio" id="mountain" name="favoriteLandscape" ng-click="selectFavoriteLandscape('mountain');"><label for="mountain">Mountain</label></p>
+				<a title="{{landscape_a_title}}" href="{{landscape_a_href}}"><img width="100%" alt="{{landscape_img_alt}}" ng-src="{{landscape_img_src}}"></img></a>
+			</div>
+		</div>
+	</body>
+</html>

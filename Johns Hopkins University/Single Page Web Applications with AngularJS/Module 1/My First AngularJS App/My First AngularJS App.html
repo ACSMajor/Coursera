@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myFirstAngularApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="../../../../AngularJS/1.8.2/angular.min.js"></script>
+		<script src="./angularApp.js"></script>
+		<title>My First AngularJS App</title>
+	</head>
+	<body>
+		<h1>Hello Johns Hopkins University! I am thrilled about this course!!</h1>
+		<h2>Single Page Web Applications with AngularJS</h2>
+		<h3>My First AngularJS App</h3>
+		<div ng-controller="myFirstAngularAppController">
+			<p>{{firstName}} {{lastName}}</p>
+			<p>{{sayHello()}}</p>
+			<input type="text" ng-model="firstName">
+			<input type="text" ng-model="lastName">
+		</div>
+	</body>
+</html>
