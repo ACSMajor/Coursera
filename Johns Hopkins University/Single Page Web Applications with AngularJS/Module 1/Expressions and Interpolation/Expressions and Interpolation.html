@@ -18,9 +18,9 @@
 			<div>
 				<h2>Part 2</h2>
 				<p>What would be your favorite landscape?</p>
-				<p><input type="radio" id="beach" name="favoriteLandscape" ng-click="selectFavoriteLandscape('beach');"><label for="beach">Beach</label></p>
-				<p><input type="radio" id="mountain" name="favoriteLandscape" ng-click="selectFavoriteLandscape('mountain');"><label for="mountain">Mountain</label></p>
-				<a title="{{landscape_a_title}}" href="{{landscape_a_href}}"><img width="100%" alt="{{landscape_img_alt}}" ng-src="{{landscape_img_src}}"></img></a>
+				<p><input type="radio" id="beach" ng-model="landscape.value" value="beach" ng-change="selectFavoriteLandscape();"><label for="beach">Beach</label></p>
+				<p><input type="radio" id="mountain" ng-model="landscape.value" value="mountain" ng-change="selectFavoriteLandscape();"><label for="mountain">Mountain</label></p>
+				<a title="{{landscape.a.title}}" href="{{landscape.a.href}}"><img width="100%" alt="{{landscape.img.alt}}" ng-src="{{landscape.img.src}}"></img></a>
 			</div>
 		</div>
 	</body>
