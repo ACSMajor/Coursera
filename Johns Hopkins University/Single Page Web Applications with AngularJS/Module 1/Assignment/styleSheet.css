@@ -1,0 +1,64 @@
+body {
+	font-size: 20px;
+	color: saddlebrown;
+	background-color: wheat;
+	font-family: Georgia;
+}
+body.mainContainer {
+	margin: 0 100px 0 100px;
+}
+h1.institution,
+h2.course,
+h3.module,
+h3.assignment,
+div.appContainer {
+	border-style: outset;
+	border-radius: .3em;
+	border-color: rosybrown;
+	background-color: saddlebrown;
+	color: wheat;
+	text-decoration: underline;
+	width: fit-content;
+	padding: .2em;
+}
+.centerAlign {
+	translate: -50%;
+	position: relative;
+	left: 50%;
+}
+.textAlignCenter {
+	text-align: center;
+}
+.msgArea {
+	height: 1ex;
+}
+div.appContainer {
+	border-radius: .5em;
+	text-decoration: none;
+	padding: .5em;
+}
+input#lunchItems {
+	width: -webkit-fill-available;
+	font-size: .9em;
+	font-family: Georgia;
+	border-width: thick;
+	border-color: rosybrown;
+	border-style: inset;
+	border-radius: .3em;
+	padding: .3em;
+}
+button#lunchCheck {
+	font-size: .9em;
+	font-family: Georgia;
+	border-width: thick;
+	border-color: bisque;
+	border-radius: .3em;
+	background-color: wheat;
+	color: saddlebrown;
+	padding: .3em .5em;
+}
+button#lunchCheck:hover {
+	border-color: rosybrown;
+	background-color: saddlebrown;
+	color: wheat;
+}

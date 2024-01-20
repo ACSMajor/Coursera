@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="lunchCheckApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="../../../../AngularJS/1.8.2/angular.min.js"></script>
+		<script src="./angularApp.js"></script>
+		<link rel="stylesheet" href="./styleSheet.css">
+		<title>Module 1 - Assignment: Lunch Checker App with AngularJS</title>
+	</head>
+	<body class="mainContainer">
+		<h1 class="institution centerAlign">Johns Hopkins University</h1>
+		<h2 class="course">Single Page Web Applications with AngularJS</h2>
+		<ul>
+			<li>
+				<h3 class="module">Module 1</h3>
+				<ul>
+					<li>
+						<h3 class="assignment">Assignment: Lunch Checker App with AngularJS</h3>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="appContainer centerAlign" ng-controller="lunchCheckAppController">
+			<em>
+				<p><b>Note: </b>This app is going to disregard any empty items typed.</p>
+				<p>
+					<b>Examples:</b>
+					<ol>
+						<li>"," or ",," or ",,," - It doesn't matter how many commas you type, this is going to be considered as empty;</li>
+						<li>",item1" or "item1," or ",,item1" or ",item1," or "item1,," - It's going to consider just one item;</li>
+						<li> ",item1,item2" or "item1,,item2" or "item1,item2," - It's going to consider just two items; and</li>
+						<li> ",item1,item2,item3" or "item1,,item2,item3" or "item1,item2,,item3" or "item1,item2,item3," - It's going to consider just three items.</li>
+					</ol>
+				</p>
+				<p>If the expected item is empty or contains only spaces, it's going to be disregarded as a valid item and won't be accounted.</p>
+			</em>
+			<p>Please, type in the below textbox a comma-separated list of items that you usually eat for lunch:</p>
+			<p><input type="text" id="lunchItems" ng-model="lunch.items" style="border-color: {{lunch.borderColor}};"></p>
+			<p class="textAlignCenter"><button id="lunchCheck" ng-click="lunchCheck();">Check If Too Much</button></p>
+			<p class="textAlignCenter msgArea" style="color: {{lunch.color}};">{{lunch.msg}}</p>
+		</div>
+	</body>
+</html>
