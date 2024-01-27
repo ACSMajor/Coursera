@@ -2,9 +2,9 @@
 	'use strict';
 	angular
 		.module('msgApp', [])
-		.controller('msgAppController', msgAppController);
-	msgAppController.$inject = ['$scope'];
-	function msgAppController($scope) {
+		.controller('msgAppController', MsgAppController);
+	MsgAppController.$inject = ['$scope'];
+	function MsgAppController($scope) {
 		$scope.message = "Welcome to the Expressions and Interpolation exercise!";
 		$scope.landscape = {
 			value: "",

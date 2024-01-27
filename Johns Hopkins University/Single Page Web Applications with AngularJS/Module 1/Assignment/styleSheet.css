@@ -5,7 +5,25 @@ body {
 	font-family: Georgia;
 }
 body.mainContainer {
-	margin: 0 100px 0 100px;
+	margin: 3ex 100px 3ex 100px;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.83em;
+}
+h3 {
+	font-size: 1.67em;
+}
+h4 {
+	font-size: 1.5em;
+}
+h5 {
+	font-size: 1.33em;
+}
+h6 {
+	font-size: 1.17em;
 }
 h1.institution,
 h2.course,
@@ -21,13 +39,46 @@ div.appContainer {
 	width: fit-content;
 	padding: .2em;
 }
+h4.listTitle {
+	text-decoration: underline;
+	margin: 0;
+	width: fit-content;
+}
+div.buyingListContainer {
+	margin-right: 1.5em;
+}
+div.buyingListContainer,
+div.boughtListContainer {
+	display: inline-table;
+	height: 33ex;
+	width: 15em;
+}
+div.inlineTable {
+	display: inline-table;
+	width: -webkit-fill-available;
+}
+span.tableCell {
+	display: table-cell;
+}
+ol.listHeight {
+	height: 23ex;
+}
+p.msg {
+	margin: 0;
+	text-align: center;
+	color: orangered;
+}
 .centerAlign {
 	translate: -50%;
 	position: relative;
 	left: 50%;
+	width: fit-content;
 }
 .textAlignCenter {
 	text-align: center;
+}
+.textAlignRight {
+	text-align: right;
 }
 .msgArea {
 	height: 1ex;
@@ -47,7 +98,11 @@ input#lunchItems {
 	border-radius: .3em;
 	padding: .3em;
 }
-button#lunchCheck {
+li.buyingItem {
+	line-height: 2.25em;
+}
+button#lunchCheck,
+button.buyItem {
 	font-size: .9em;
 	font-family: Georgia;
 	border-width: thick;
@@ -57,7 +112,8 @@ button#lunchCheck {
 	color: saddlebrown;
 	padding: .3em .5em;
 }
-button#lunchCheck:hover {
+button#lunchCheck:hover,
+button.buyItem:hover {
 	border-color: rosybrown;
 	background-color: saddlebrown;
 	color: wheat;

@@ -1,10 +1,10 @@
 (function() {
 	'use strict';
 	angular
-		.module('lunchCheckApp', [])
-		.controller('lunchCheckAppController', lunchCheckAppController);
-	lunchCheckAppController.$inject = ['$scope'];
-	function lunchCheckAppController($scope) {
+		.module('LunchCheckApp', [])
+		.controller('LunchCheckAppController', LunchCheckAppController);
+	LunchCheckAppController.$inject = ['$scope'];
+	function LunchCheckAppController($scope) {
 		$scope.lunch = {
 			items: "",
 			msg: "",
@@ -21,8 +21,8 @@
 			});
 			if (itemsQty == 0) {
 				$scope.lunch.msg = "Please Enter Data First!";
-				$scope.lunch.color = "indianred";
-				$scope.lunch.borderColor = "indianred";
+				$scope.lunch.color = "orangered";
+				$scope.lunch.borderColor = "orangered";
 			} else {
 				if (itemsQty > 3)
 					$scope.lunch.msg = "Too Much!";
