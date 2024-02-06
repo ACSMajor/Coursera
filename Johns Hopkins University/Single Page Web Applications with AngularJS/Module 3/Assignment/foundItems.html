@@ -1,0 +1,32 @@
+<div class="errMsg" ng-if="menuItems.isEmpty();">
+	<h6>Nothing Found!</h6>
+</div>
+<div class="menuTable menuPadding" ng-if="menuItems.hasItems();">
+	<ol class="menuList">
+		<li class="h5Marker" ng-repeat="menuCategory in menuItems.items">
+			<div class="menuTable">
+				<div class="menuTableCell">
+					<h5 class="underline">{{menuCategory.category.name}}</h5>
+				</div>
+				<div class="menuTableCell textAlignRight">
+					<button class="narrowItDown" ng-click="menuItems.onRemoveCategory({categoryIndex: menuCategory.category.short_name});">Don't Want {{menuCategory.category.name}}!</button>
+				</div>
+			</div>
+			<ol>
+				<li class="h6Marker" ng-repeat="menuItem in menuCategory.menu_items">
+					<div class="menuTable">
+						<div class="menuTableCell">
+							<h6>{{menuItem.name}}</h6>
+							<p>{{menuItem.description | firstCapitalLetter}}</p>
+							<p ng-if="menuItem.price_small;">{{menuItem.small_portion_name | firstCapitalLetter : 'Small'}}: {{menuItem.price_small | currency}}</p>
+							<p ng-if="menuItem.price_large;">{{menuItem.large_portion_name | firstCapitalLetter : 'Large'}}: {{menuItem.price_large | currency}}</p>
+						</div>
+						<div class="menuTableCell textAlignRight">
+							<button class="narrowItDown" ng-click="menuItems.onRemoveItem({categoryIndex: menuCategory.category.short_name, itemIndex: $index});">Don't Want This One!</button>
+						</div>
+					</div>
+				</li>
+			</ol>
+		</li>
+	</ol>
+</div>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="filterApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="../../../../AngularJS/1.8.2/angular.min.js"></script>
+		<script src="./angularApp.js"></script>
+		<link rel="stylesheet" href="../../Module%201/Assignment/styleSheet.css">
+		<title>AngularJS Filters</title>
+	</head>
+	<body class="mainContainer">
+		<h1 class="institution centerAlign">Johns Hopkins University</h1>
+		<h2 class="course">Single Page Web Applications with Angular JS</h2>
+		<ul>
+			<li>
+				<h3 class="module">Module 2</h3>
+				<ul>
+					<li>
+						<h3 class="lecture">Lecture 12<sup>th</sup>: Filters</h3>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div ng-controller="filterAppController">
+			<div class="appContainer centerAlign">
+				<p class="indent justify" ng-repeat="paragraph in lecture.paragraphs">{{paragraph}}</p>
+			</div>
+			<div class="appContainer centerAlign">
+				<h4 class="indent underline">1<sup>st</sup> Filter Implementation - uppercase:</h4>
+				<p class="indent justify" ng-repeat="paragraph in lecture.paragraphs">{{paragraph | uppercase}}</p>
+				<em>
+					<p class="indent justify"><b>Note:</b> The above Filter implementation was done directly in the HTML document.</p>
+					<p class="indent justify">Fell free to inspect this page and take a look at how that was done.</p>
+				</em>
+			</div>
+			<div class="appContainer centerAlign">
+				<h4 class="indent underline">2<sup>nd</sup> Filter Implementation - uppercase/lowercase Function</h4>
+				<p class="indent justify" ng-repeat="paragraph in switchCase();">{{paragraph}}</p>
+				<p class="textAlignCenter">
+					<button class="updateCaseSwitch" ng-click="updateCaseSwitch();" ng-disabled="caseSwitch == undefined">Original</button>
+					<button class="updateCaseSwitch" ng-click="updateCaseSwitch('uppercase');" ng-disabled="caseSwitch == 'uppercase';">Upper</button>
+					<button class="updateCaseSwitch" ng-click="updateCaseSwitch('lowercase');" ng-disabled="caseSwitch == 'lowercase';">Lower</button>
+				</p>
+				<em>
+					<p class="indent justify"><b>Note:</b> This implementation was devised to be much more fun than the previous one.</p>
+					<p class="indent justify">Because it's a lot more fun when we can interact, isn't it?</p>
+					<p class="indent justify">So, I added buttons to change the format of our already well known text, so you can choose three formats:</p>
+					<ol class="indent justify">
+						<li>The original one;</li>
+						<li>Another with everything written in uppercase letters; and</li>
+						<li>The final option, that allows you to show the text written in all lowercase letters.</li>
+					</ol>
+					<p class="indent justify">The functions actuate in a manner that the input text that is shown doesn't get altered by the code, formating the input text prior to it's exhibition on the page.</p>
+					<p class="indent justify">I hope you enjoy the accomplishments attained by this experiment.</p>
+					<p class="indent justify">Again, feel free to inspect this page code and get to know a little more how everything was made.</p>
+				</em>
+			</div>
+			<div class="appContainer centerAlign">
+				<h4 class="indent underline">3<sup>rd</sup> Filter Implementation - currency</h4>
+				<p class="indent justify">This is an offering from your green but trustworthy aspiring AngularJS developer, with {{cost | currency}} cost but boldly trying to reach delivering the most of value with this kind of endeavor.</p>
+			</div>
+		</div>
+	</body>
+</html>
