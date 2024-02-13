@@ -37,7 +37,7 @@
 			<p>Please, type in the below textbox a comma-separated list of items that you usually eat for lunch:</p>
 			<p><input type="text" id="lunchItems" ng-model="lunch.items" style="border-color: {{lunch.borderColor}};"></p>
 			<p class="textAlignCenter"><button id="lunchCheck" ng-click="lunchCheck();">Check If Too Much</button></p>
-			<p class="textAlignCenter msgArea" style="color: {{lunch.color}};">{{lunch.msg}}</p>
+			<p class="textAlignCenter msgArea" style="color: {{lunch.color;}}">{{lunch.msg}}</p>
 		</div>
 	</body>
 </html>

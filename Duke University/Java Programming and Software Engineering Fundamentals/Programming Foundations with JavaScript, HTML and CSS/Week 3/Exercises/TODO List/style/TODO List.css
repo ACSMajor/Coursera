@@ -1,0 +1,189 @@
+body {
+	font-size: 1vw;
+	padding: 0 1vw;
+	background-color: steelblue;
+}
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2.67em;
+}
+h3 {
+	font-size: 2.33em;
+}
+h4 {
+	font-size: 2em;
+}
+h5 {
+	font-size: 1.67em;
+}
+h6 {
+	font-size: 1.33em;
+}
+h1.headBox,
+h2.headBox,
+h3.headBox,
+h4.headBox,
+h5.headBox,
+h6.headBox {
+	text-decoration: underline;
+}
+h1.headBox,
+h2.headBox,
+h3.headBox,
+h4.headBox,
+h5.headBox,
+h6.headBox,
+div.appBox {
+	margin: 1vw;
+	color: midnightblue;
+	border: outset;
+	border-width: .5vw;
+	background-color: cadetblue;
+	border-color: lightsteelblue;
+	border-radius: 1vw;
+	padding: 1vw;
+	width: fit-content;
+}
+h1.appHead {
+	margin: 1vw;
+}
+div.inputTable {
+	display: table;
+	width: -webkit-fill-available;
+}
+div.inputTableCell {
+	display: table-cell;
+}
+input.inputTask {
+	border: inset;
+	border-color: lightsteelblue;
+	width: -webkit-fill-available;
+	border-radius: .25vw;
+}
+input.addTask,
+input.buttonAuthor {
+	color: midnightblue;
+	background-color: cadetblue;
+	border-color: lightsteelblue;
+	border-radius: .25vw;
+}
+input.addTask:hover,
+input.author:hover {
+	color: cadetblue;
+	background-color: midnightblue;
+	border-color: steelblue;
+}
+input.done {
+	background-color: green;
+	border-color: mediumseagreen;
+	color: white;
+	font-weight: bold;
+	border-radius: .25vw;
+	height: 2em;
+	width: 2em;
+}
+input.done:hover {
+	background-color: white;
+	border-color: white;
+	color: green;
+}
+input.remove {
+	background-color: red;
+	border-color: orangered;
+	color: white;
+	font-weight: bold;
+	border-radius: .25vw;
+	height: 2em;
+	width: 2em;
+}
+input.remove:hover {
+	background-color: white;
+	border-color: white;
+	color: red;
+}
+input.important {
+	background-color: darkorange;
+	border-color: orange;
+	font-weight: bold;
+	border-radius: .25vw;
+	height: 2em;
+	width: 2em;
+}
+input.important:hover {
+	background-color: black;
+	border-color: black;
+	color: orange;
+}
+input.done:disabled,
+input.remove:disabled,
+input.important:disabled {
+	background-color: lightsteelblue;
+	border-color: lightgrey;
+}
+input.done:disabled:hover,
+input.remove:disabled:hover,
+input.important:disabled:hover {
+	color: white;
+}
+ul.toDoList {
+	padding-left: 0;
+}
+ul.toDoList > li {
+	list-style-type: none;
+}
+span#authorName {
+	display: none;
+	padding: 1vw;
+	font-weight: bold;
+	font-size: 1.1em;
+	background-color: midnightblue;
+	color: cadetblue;
+	margin-top: .5em;
+	border-radius: .4vw;
+	border: inset;
+	border-color: steelblue;
+}
+ul,
+ol {
+	margin: 1vw 0;
+}
+hr {
+	border-color: midnightblue;
+}
+li:has(> h1)::marker {
+	font-size: 3em;
+	color: midnightblue;
+}
+li:has(> h2)::marker {
+	font-size: 2.67em;
+	color: midnightblue;
+}
+li:has(> h3)::marker {
+	font-size: 2.33em;
+	color: midnightblue;
+}
+li:has(> h4)::marker {
+	font-size: 2em;
+	color: midnightblue;
+}
+li:has(> h5)::marker {
+	font-size: 1.67em;
+	color: midnightblue;
+}
+li:has(> h6)::marker {
+	font-size: 1.33em;
+	color: midnightblue;
+}
+.alignCenter {
+	translate: -50%;
+	left: 50%;
+	position: relative;
+}
+.textAlignCenter {
+	text-align: center;
+}
+.textAlignRight {
+	text-align: right;
+}
