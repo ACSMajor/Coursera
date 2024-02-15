@@ -1,0 +1,8 @@
+<li class="h5Marker" ng-repeat="category in $ctrl.items">
+	<div class="menuTable">
+		<div class="menuTableCell">
+			<h5 id="!/categories/items/{{category.short_name}}"><a ui-sref="categories.items({categoryShortName:category.short_name})" ui-sref-active="activeOption" ng-click="$ctrl.setSelectedCategory(category.short_name);">{{category.name}}</a></h5>
+			<ui-view ng-if="category.short_name === $ctrl.selectedCategory"></ui-view>
+		</div>
+	</div>
+</li>

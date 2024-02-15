@@ -1,0 +1,10 @@
+<li class="h6Marker" ng-repeat="item in $ctrl.items">
+	<div class="menuTable">
+		<div class="menuTableCell">
+			<h6>{{item.name}}</h6>
+			<p ng-repeat="description in item.description">{{description | firstCapitalLetter}}</p>
+			<p ng-if="item.price_small">{{item.small_portion_name | firstCapitalLetter : 'small'}}: {{item.price_small | currency}}</p>
+			<p ng-if="item.price_large">{{item.large_portion_name | firstCapitalLetter : 'large'}}: {{item.price_large | currency}}</p>
+		</div>
+	</div>
+</li>

@@ -27,12 +27,19 @@ h6 {
 	font-size: 1.17em;
 	margin: 0;
 }
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
 h1.institution,
 h2.course,
 h3.module,
 h3.assignment,
 h3.lecture,
-div.appContainer {
+div.appContainer,
+.activeOption {
 	border-style: outset;
 	border-radius: .3em;
 	border-color: rosybrown;
@@ -42,6 +49,19 @@ div.appContainer {
 	width: fit-content;
 	padding: .2em;
 }
+div.menuContainer {
+	border-style: inset;
+	border-radius: .3em;
+	border-color: rosybrown;
+	background-color: wheat;
+	color: saddlebrown;
+	width: -webkit-fill-available;
+	padding: 1.25em .2em;
+}
+div.menuContainer > h5 > a:not(.activeOption),
+div.menuTableCell > h5 > a:not(.activeOption) {
+	color: saddleBrown;
+}
 h4.listTitle {
 	text-decoration: underline;
 	margin: 0;
@@ -50,6 +70,9 @@ h4.listTitle {
 h4.appTitle {
 	margin: 0;
 	padding: 1ex .5em;
+}
+h4.appTitle > a {
+	color: wheat;
 }
 div.appContainer {
 	margin-bottom: 3ex;
@@ -100,6 +123,7 @@ ol.indent {
 	padding-left: 72.4px;
 }
 ol.menuList {
+	margin-top: 2ex;
 	width: -webkit-fill-available;
 }
 li.buyingItem {
