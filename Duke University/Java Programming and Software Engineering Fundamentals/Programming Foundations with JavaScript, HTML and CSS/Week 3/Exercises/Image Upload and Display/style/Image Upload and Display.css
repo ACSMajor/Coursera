@@ -1,0 +1,21 @@
+input[type=text] {
+	border: inset;
+	border-color: lightsteelblue;
+	width: -webkit-fill-available;
+	border-radius: .25vw;
+}
+input[type=button] {
+	color: midnightblue;
+	background-color: cadetblue;
+	border-color: lightsteelblue;
+	border-radius: .25vw;
+}
+div.inputTableCell > label,
+div.inputTableCell > input[type=button],
+div.inputTableCell > input[type=text] {
+	font-size: 1.5em;
+}
+div.fitContent {
+	width: 1px;
+	text-wrap: nowrap;
+}

@@ -17,7 +17,8 @@ div.canvasToolBar > span {
 div.canvasToolBar > output#brushSizeOutput {
 	padding-right: .5em;
 }
-canvas#paintCanvas {
+canvas#paintCanvas,
+canvas#uploadCanvas {
 	background-color: white;
 	border: inset;
 	border-color: lightsteelblue;
