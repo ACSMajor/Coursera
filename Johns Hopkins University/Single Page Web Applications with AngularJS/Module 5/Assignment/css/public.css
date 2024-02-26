@@ -208,6 +208,9 @@ form > p > span > label {
 form > p > input[type=text],
 form > p > span > input[type=text] {
 	color: black;
+	border-style: inset;
+	border-width: 3px;
+	border-color: #951C49;
 }
 form > p > input[type=text]#eMail {
 	width: -webkit-fill-available;
@@ -251,6 +254,16 @@ label.myInfoLabel {
 	width: 7em;
 	text-align: right;
 }
+span.errorMessage {
+	color: orangered;
+}
 span#myInfoDishDescription {
 	padding-left: .25em;
+}
+.ng-touched.ng-valid {
+	border-color: limegreen;
+}
+.ng-touched.ng-invalid {
+	border-color: orangered;
+	background-color: pink;
 }

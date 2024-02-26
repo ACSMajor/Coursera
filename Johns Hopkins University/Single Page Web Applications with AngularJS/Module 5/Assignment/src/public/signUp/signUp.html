@@ -15,7 +15,7 @@
 				required
 				ng-model="signUpCtrl.customer.firstName">
             <span
-				class="displayFlow"
+				class="displayFlow errorMessage"
 				ng-if="signUp.firstName.$error.required && signUp.firstName.$touched">
 				First Name is Required!
 			</span>
@@ -29,7 +29,7 @@
 				required
 				ng-model="signUpCtrl.customer.lastName">
 		    <span
-				class="displayFlow"
+				class="displayFlow errorMessage"
 				ng-if="signUp.lastName.$error.required && signUp.lastName.$touched">
 				Last Name is Required!
 			</span>
@@ -47,7 +47,7 @@
 	</p>
 	<p class="displayTable"
 	   ng-if="signUp.eMail.$error.required && signUp.eMail.$touched">
-		<span class="displayTableCell">
+		<span class="displayTableCell errorMessage">
 			E-Mail is Required!
 		</span>
 	</p>
@@ -59,7 +59,9 @@
 			id="phoneNumber"
 			required
 			ng-model="signUpCtrl.customer.phoneNumber">
-		<span ng-if="signUp.phoneNumber.$error.required && signUp.phoneNumber.$touched">
+		<span
+			class="errorMessage"
+			ng-if="signUp.phoneNumber.$error.required && signUp.phoneNumber.$touched">
 			Phone Number is Required!
 		</span>
 	</p>
@@ -85,10 +87,14 @@
 			ng-model="signUpCtrl.customer.favoriteDish.name">
 	</p>
 	<p>
-		<span ng-if="signUp.menuNumber.$error.required && signUp.menuNumber.$touched">
+		<span
+			class="errorMessage"
+			ng-if="signUp.menuNumber.$error.required && signUp.menuNumber.$touched">
 			Favorite Dish is Required!
 		</span>
-		<span ng-if="!signUp.menuNumber.$error.required && signUp.favoriteDishName.$error.required">
+		<span
+			class="errorMessage"
+			ng-if="!signUp.menuNumber.$error.required && signUp.favoriteDishName.$error.required">
 			No Such Menu Number Exists!
 		</span>
 	</p>

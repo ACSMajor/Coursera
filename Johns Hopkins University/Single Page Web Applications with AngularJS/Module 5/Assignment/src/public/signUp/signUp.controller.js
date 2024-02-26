@@ -37,12 +37,12 @@
 			signUpCtrl.resetForm(form);
 		}
 		signUpCtrl.resetForm = function(form) {
-			form.firstName.$touched = false;
-			form.lastName.$touched = false;
-			form.eMail.$touched = false;
-			form.phoneNumber.$touched = false;
-			form.menuNumber.$touched = false;
 			signUpCtrl.customer = undefined;
+			form.firstName.$setUntouched();
+			form.lastName.$setUntouched();
+			form.eMail.$setUntouched();
+			form.phoneNumber.$setUntouched();
+			form.menuNumber.$setUntouched();
 		}
 	}
 })();
