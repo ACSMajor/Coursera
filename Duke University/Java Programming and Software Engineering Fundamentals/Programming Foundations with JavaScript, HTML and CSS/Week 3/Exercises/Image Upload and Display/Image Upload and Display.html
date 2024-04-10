@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="../TODO List/style/TODO List.css">
@@ -33,22 +33,22 @@
 		<div class="appBox alignCenter">
 			<h1 class="appHead textAlignCenter">Image Upload and Display</h1>
 			<hr>
-			<div class="inputTable">
-				<div class="inputTableCell fitContent">
-					<label for="fileInput">File Name:</label>
+			<form method="post" enctype="multipart/form-data">
+				<div class="inputTable">
+					<div class="inputTableCell fitContent">
+						<label for="fileInput">File Name:</label>
+					</div>
+					<div class="inputTableCell">
+						<input type="text" id="fileInput">
+					</div>
+					<div class="inputTableCell fitContent">
+						<input type="button" value="Upload" onclick="//upload()">
+					</div>
+					<div class="inputTableCell">
+						<input type="file" id="fileInput" onchange="//upload()">
+					</div>
 				</div>
-				<div class="inputTableCell">
-					<input type="text" id="fileInput">
-				</div>
-				<div class="inputTableCell fitContent">
-					<input type="button" value="Upload" onclick="upload()">
-				</div>
-				<!--
-				<div class="inputTableCell">
-					<input type="file" id="fileInput" onchange="upload()">
-				</div>
-				-->
-			</div>
+			</form>
 			<hr>
 			<canvas id="uploadCanvas" class="alignCenter" width="640" height="480"></canvas>
 		</div>
