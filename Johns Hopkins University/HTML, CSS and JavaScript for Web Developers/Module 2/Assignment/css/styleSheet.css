@@ -37,12 +37,15 @@ h6 {
 	padding: 10px;
 }
 .articleBox {
-	border: black solid 1px;
+	border: saddlebrown solid 1px;
+	border-radius: 20px;
+	height: 100%;
 }
 .articleHeading {
 	float: right;
-    border-bottom: black solid 1px;
-    border-left: black solid 1px;
+    border-bottom: saddlebrown solid 1px;
+    border-left: saddlebrown solid 1px;
+    border-radius: 0 20px;
     position: relative;
     padding: 20px;
 }
@@ -51,17 +54,27 @@ h6 {
     padding: 20px;
     margin: 0;
 }
+#menuHeading {
+	border: saddlebrown solid 1px;
+	border-radius: 20px;
+	margin: 0 20px;
+	padding: 20px;
+}
+#menuItems {
+	display: flex;
+	flex-wrap: wrap;
+}
 #chicken {
-	background-color: orangered;
-	color: white;
+	background-color: #df0000;
+	color: wheat;
 }
 #beef {
 	background-color: seagreen;
-	color: white;
+	color: wheat;
 }
 #sushi {
 	background-color: steelblue;
-	color: white;
+	color: wheat;
 }
 
 @media (min-width: 992px) {
