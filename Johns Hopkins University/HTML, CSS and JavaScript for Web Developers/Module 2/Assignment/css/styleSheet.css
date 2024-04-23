@@ -83,7 +83,7 @@ h6 {
 	}
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991.99px) {
 	.col-md-06 {
 		width: 50%;
 	}
@@ -92,7 +92,7 @@ h6 {
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.99px) {
 	.col-sm-12 {
 		width: 100%;
 	}
