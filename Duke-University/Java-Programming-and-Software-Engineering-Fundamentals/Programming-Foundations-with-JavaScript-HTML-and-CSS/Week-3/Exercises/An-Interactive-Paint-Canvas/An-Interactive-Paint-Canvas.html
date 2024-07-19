@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../TODO-List/style/TODO-List.css">
+		<link rel="stylesheet" href="./style/An-Interactive-Paint-Canvas.css">
+		<script src="./script/An-Interactive-Paint-Canvas.js"></script>
+		<title>An Interactive Paint Canvas</title>
+	</head>
+	<body>
+		<h1 class="headBox alignCenter">Duke University</h1>
+		<ul>
+			<li>
+				<h2 class="headBox">Java Programming and Software Fundamentals</h2>
+				<ul>
+					<li>
+						<h3 class="headBox">Programming Fundamentals with JavaScript, HTML and CSS</h3>
+						<ul>
+							<li>
+								<h4 class="headBox">Week 3</h4>
+								<ul>
+									<li>
+										<h5 class="headBox">Exercise: An Interactive Paint Canvas</h5>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="appBox alignCenter">
+			<h1 class="appHead textAlignCenter">An Interactive Paint Canvas</h1>
+			<hr>
+			<div class="canvasToolBar">
+				<span>Width:</span>
+				<input class="inputText" type="text" id="canvasWidth" value="640" maxlength="4" onchange="setCanvasWidth(this.value);"/>
+				<span>Height:</span>
+				<input class="inputText" type="text" id="canvasHeight" value="480" maxlength="4" onchange="setCanvasHeight(this.value);"/>
+				<span>Color:</span>
+				<input type="color" id="brushColor" value="#000000"/>
+				<span>Size:</span>
+				<input type="range" id="brushSize" min="1" max="50" value="5" oninput="setBrushSize(this.value);"/>
+				<output id="brushSizeOutput" for="brushSize">5</output>
+				<input type="button" id="clearCanvas" value="Clear" onclick="clearCanvas();"/>
+			</div>
+			<hr>
+			<canvas id="paintCanvas" class="alignCenter" width="640" height="480" onmousedown="startPainting(); doPaint();" onmouseup="stopPainting();" onmouseout="stopPainting();" onmousemove="doPaint();"></canvas>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NarrowItDownApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="../../../../AngularJS/1.8.2/angular.min.js"></script>
+		<script src="./angularApp.js"></script>
+		<link rel="stylesheet" href="../../Module-1/Assignment/styleSheet.css">
+		<title>Module 3 - Assignment: Narrow It Down! AngularJS App</title>
+	</head>
+	<body class="mainContainer">
+		<h1 class="institution centerAlign">Johns Hopkins University</h1>
+		<h2 class="course">Single Page Web Applications with AngularJS</h2>
+		<ul>
+			<li>
+				<h3 class="module">Module 3</h3>
+				<ul>
+					<li>
+						<h3 class="assignment">Assignment: Narrow It Down! AngularJS App</h3>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="appContainer centerAlign" ng-controller="NarrowItDownController as narrowItDown">
+			<h4 class="textAlignCenter underline appTitle">Narrow Down Your Chinese Menu Choice</h4>
+			<p class="notePadding">
+				<em>
+					<b>Note: </b>
+					The search will take into account the dishes' name and the ingredients present in the dishes' description.
+				</em>
+			</p>
+			<div class="menuTable">
+				<div class="menuTableCell">
+					<input type="text" id="menuFilter" ng-model="narrowItDown.searchItem" placeholder="Type Some Search Term Here">
+				</div>
+				<div class="menuTableCell narrowItDownButton">
+					<button class="narrowItDown" ng-click="narrowItDown.menuSearch();">Narrow It Down For Me!</button>
+				</div>
+			</div>
+			<found-items
+				items="narrowItDown.menuItems"
+				on-remove-category="narrowItDown.removeMenuCategory(categoryIndex);"
+				on-remove-item="narrowItDown.removeMenuItem(categoryIndex, itemIndex);"></found-items>
+		</div>
+	</body>
+</html>
