@@ -12,10 +12,31 @@ input[type=button] {
 }
 div.inputTableCell > label,
 div.inputTableCell > input[type=button],
-div.inputTableCell > input[type=text] {
+div.inputTableCell > input[type=text],
+div.inputTableCell > input[type=file] {
 	font-size: 1.5em;
+}
+div.inputTableCell > input[type=button]:disabled {
+	color: lightgray;
+	background-color: darkgray;
+	border-color: lightgray;
+}
+div.inputTableCell > input[type=file] {
+	width: -webkit-fill-available;
 }
 div.fitContent {
 	width: 1px;
 	text-wrap: nowrap;
+}
+div.appBox.alignCenter {
+	max-width: -webkit-fill-available;
+	canvas#uploadCanvas.alignCenter {
+		max-width: -webkit-fill-available;
+	}
+}
+input#fileInput::file-selector-button {
+	color: midnightblue;
+	background-color: cadetblue;
+	border-color: lightsteelblue;
+	border-radius: .25vw;
 }

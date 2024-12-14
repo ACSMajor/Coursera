@@ -3,7 +3,7 @@
 	<head>
 		<link rel="stylesheet" href="../TODO-List/style/TODO-List.css">
 		<link rel="stylesheet" href="../An-Interactive-Paint-Canvas/style/An-Interactive-Paint-Canvas.css"> 
-		<link rel="stylesheet" href="./style/Image Upload and Display.css">
+		<link rel="stylesheet" href="./style/Image-Upload-and-Display.css">
 		<script src="./lib/SimpleImage.js"></script>
 		<script src="./script/Image-Upload-and-Display.js"></script>
 		<title>Image Upload and Display</title>
@@ -39,16 +39,19 @@
 						<label for="fileInput">File Name:</label>
 					</div>
 					<div class="inputTableCell">
-						<input type="text" id="fileInput">
+						<input id="fileInput" type="file" oninput="enableUpload()">
 					</div>
 					<div class="inputTableCell fitContent">
-						<input type="button" value="Upload" onclick="//upload()">
-					</div>
-					<div class="inputTableCell">
-						<input type="file" id="fileInput" onchange="//upload()">
+						<input id="uploadButton" type="button" value="Upload" onclick="upload()" disabled>
 					</div>
 				</div>
 			</form>
+			<hr>
+			<div class="inputTable">
+				<div class="inputTableCell">
+					<input id="makeItGrayButton" type="button" value="Make it Gray" onclick="makeItGray()" disabled>
+				</div>
+			</div>
 			<hr>
 			<canvas id="uploadCanvas" class="alignCenter" width="640" height="480"></canvas>
 		</div>

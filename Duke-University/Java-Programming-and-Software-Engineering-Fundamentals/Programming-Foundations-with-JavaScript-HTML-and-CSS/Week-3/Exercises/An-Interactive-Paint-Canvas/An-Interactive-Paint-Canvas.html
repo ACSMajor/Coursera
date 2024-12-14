@@ -45,7 +45,14 @@
 				<input type="button" id="clearCanvas" value="Clear" onclick="clearCanvas();"/>
 			</div>
 			<hr>
-			<canvas id="paintCanvas" class="alignCenter" width="640" height="480" onmousedown="startPainting(); doPaint();" onmouseup="stopPainting();" onmouseout="stopPainting();" onmousemove="doPaint();"></canvas>
+			<canvas id="paintCanvas" class="alignCenter" width="640" height="480"
+				onmousedown="startPainting(); doPaint(event);"
+				onmouseup="stopPainting();"
+				onmouseout="stopPainting();"
+				onmousemove="doPaint(event);"
+				ontouchstart="startPainting(); touchPaint(event);"
+				ontouchend="stopPainting();"
+				ontouchmove="touchPaint(event);"></canvas>
 		</div>
 	</body>
 </html>

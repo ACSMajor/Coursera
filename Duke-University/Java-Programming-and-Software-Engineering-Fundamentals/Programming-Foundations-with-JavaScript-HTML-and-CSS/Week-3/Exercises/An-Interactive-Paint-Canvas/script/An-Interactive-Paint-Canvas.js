@@ -26,9 +26,14 @@ function startPainting() {
 function stopPainting() {
 	isPainting = false;
 }
-function doPaint() {
-	if (isPainting) {
+function doPaint(event) {
+	if (isPainting)
 		paintCircle(event.offsetX, event.offsetY);
+}
+function touchPaint(event) {
+	if (isPainting) {
+		event.preventDefault();
+		paintCircle(event.touches[0].clientX - getCanvas().getBoundingClientRect().left, event.touches[0].clientY - getCanvas().getBoundingClientRect().top);
 	}
 }
 function getBrushSize() {
