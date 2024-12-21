@@ -2,11 +2,12 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./style/TODO-List.css">
 		<script src="./script/TODO-List.js"></script>
 		<title>TODO List</title>
 	</head>
-	<body>
+	<body class="font-small font-medium">
 		<h1 class="headBox alignCenter">Duke University</h1>
 		<ul>
 			<li>
@@ -28,14 +29,14 @@
 				</ul>
 			</li>
 		</ul>
-		<div class="appBox alignCenter">
+		<div class="appBox alignCenter toDoListApp">
 			<h1 class="appHead">TODO List</h1>
 			<div class="inputTable">
 				<div class="inputTableCell">
 					<input id="inputTask" class="inputTask" type="text" placeholder="Enter Task"/>
 				</div>
 				<div class="inputTableCell textAlignRight">
-					<input class="addTask" type="button" class="add" onclick="addTask();" value="Add"/>
+					<input class="addTask" type="button" onclick="addTask();" value="Add"/>
 				</div>
 			</div>
 			<hr>

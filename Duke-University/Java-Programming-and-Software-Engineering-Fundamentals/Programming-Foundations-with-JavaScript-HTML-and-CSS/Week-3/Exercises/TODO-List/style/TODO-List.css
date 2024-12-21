@@ -1,5 +1,4 @@
 body {
-	font-size: 1vw;
 	padding: 0 1vw;
 	background-color: steelblue;
 }
@@ -21,6 +20,9 @@ h5 {
 h6 {
 	font-size: 1.33em;
 }
+h1.headBox {
+	text-align: center;
+}
 h1.headBox,
 h2.headBox,
 h3.headBox,
@@ -28,6 +30,12 @@ h4.headBox,
 h5.headBox,
 h6.headBox {
 	text-decoration: underline;
+	display: -webkit-box;
+	width: fit-content;
+}
+div.appBox {
+	width: fit-content;
+	max-width: -webkit-fill-available;
 }
 h1.headBox,
 h2.headBox,
@@ -36,7 +44,7 @@ h4.headBox,
 h5.headBox,
 h6.headBox,
 div.appBox {
-	margin: 1vw;
+	margin: 1vw 0;
 	color: midnightblue;
 	border: outset;
 	border-width: .5vw;
@@ -44,7 +52,6 @@ div.appBox {
 	border-color: lightsteelblue;
 	border-radius: 1vw;
 	padding: 1vw;
-	width: fit-content;
 }
 h1.appHead {
 	margin: 1vw;
@@ -53,8 +60,15 @@ div.inputTable {
 	display: table;
 	width: -webkit-fill-available;
 }
+div.inputTableRow {
+	display: table-row;
+}
 div.inputTableCell {
 	display: table-cell;
+}
+div.inputTableCell.floatLeft.padding {
+	float: left;
+	padding: .5em;
 }
 input.inputTask {
 	border: inset;
@@ -127,11 +141,24 @@ input.remove:disabled:hover,
 input.important:disabled:hover {
 	color: white;
 }
+div.appBox.alignCenter.toDoListApp {
+	input[type="text"].inputTask#inputTask,
+	input[type="button"].addTask,
+	input[type="button"].buttonAuthor {
+		font-size: 2em;
+	}
+	ul#taskList.toDoList {
+		input[type="button"] {
+			font-size: 1em;
+		}	
+	}
+}
 ul.toDoList {
 	padding-left: 0;
 }
 ul.toDoList > li {
 	list-style-type: none;
+	font-size: 2em;
 }
 span#authorName {
 	display: none;
@@ -147,7 +174,8 @@ span#authorName {
 }
 ul,
 ol {
-	margin: 1vw 0;
+	margin: 1em 0 1em 1em;
+	padding: 0 0 0 1em;
 }
 hr {
 	border-color: midnightblue;
@@ -186,4 +214,16 @@ li:has(> h6)::marker {
 }
 .textAlignRight {
 	text-align: right;
+}
+
+@media (min-width: 768px) {
+	.font-medium {
+		font-size: 1.2vw;
+	}
+}
+
+@media (max-width: 767.9px) {
+	.font-small {
+		font-size: 2vw;
+	}
 }

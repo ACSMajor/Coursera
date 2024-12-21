@@ -17,7 +17,7 @@ div.inputTableCell > input[type=file] {
 	font-size: 1.5em;
 }
 div.inputTableCell > input[type=button]:disabled {
-	color: lightgray;
+	color: dimgray;
 	background-color: darkgray;
 	border-color: lightgray;
 }
@@ -28,9 +28,14 @@ div.fitContent {
 	width: 1px;
 	text-wrap: nowrap;
 }
+div.fillAvailable {
+	max-width: 1px;
+}
 div.appBox.alignCenter {
+	width: -webkit-fill-available;
 	max-width: -webkit-fill-available;
 	canvas#uploadCanvas.alignCenter {
+		width: -webkit-fill-available;
 		max-width: -webkit-fill-available;
 	}
 }

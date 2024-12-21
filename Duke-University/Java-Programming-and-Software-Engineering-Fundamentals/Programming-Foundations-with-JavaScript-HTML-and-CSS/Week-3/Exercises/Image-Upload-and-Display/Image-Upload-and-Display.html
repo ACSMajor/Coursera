@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="../TODO-List/style/TODO-List.css">
 		<link rel="stylesheet" href="../An-Interactive-Paint-Canvas/style/An-Interactive-Paint-Canvas.css"> 
 		<link rel="stylesheet" href="./style/Image-Upload-and-Display.css">
@@ -8,7 +10,7 @@
 		<script src="./script/Image-Upload-and-Display.js"></script>
 		<title>Image Upload and Display</title>
 	</head>
-	<body>
+	<body class="font-small font-medium">
 		<h1 class="headBox alignCenter">Duke University</h1>
 		<ul>
 			<li>
@@ -38,7 +40,7 @@
 					<div class="inputTableCell fitContent">
 						<label for="fileInput">File Name:</label>
 					</div>
-					<div class="inputTableCell">
+					<div class="inputTableCell fillAvailable">
 						<input id="fileInput" type="file" oninput="enableUpload()">
 					</div>
 					<div class="inputTableCell fitContent">

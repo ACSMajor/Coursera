@@ -7,9 +7,35 @@ input[type="text"].inputText {
 }
 div.canvasToolBar {
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
 	font-size: 1.5em;
+	line-height: 5vh;
+	input[type="text"].inputText#canvasWidth,
+	input[type="text"].inputText#canvasHeight,
+	input[type="button"]#clearCanvas {
+		font-size: 1em;
+	}
+	input[type="color"]#brushColor {
+		height: 4vh;
+	}
+	div:has(input[type="range"]#brushSize) {
+		margin: 0 .5em;
+	}
+	input[type="range"]#brushSize {
+		vertical-align: middle;
+		-webkit-appearance: none;
+		height: 3vh;
+		background: lightgray;
+	}
+	input[type="range"]#brushSize::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 2vh;
+		height: 4vh;
+		background: midnightblue;
+	}
 }
 div.canvasToolBar > span {
 	padding-left: .5em;
@@ -23,6 +49,7 @@ canvas#uploadCanvas {
 	border: inset;
 	border-color: lightsteelblue;
 	border-radius: .25vw;
+	max-width: -webkit-fill-available;
 }
 input[type="button"]#clearCanvas {
 	color: midnightblue;
@@ -34,4 +61,13 @@ input[type="button"]#clearCanvas:hover {
 	color: cadetblue;
 	background-color: midnightblue;
 	border-color: steelblue;
+}
+
+@media (min-width: 768px) {
+	input[type="color"]#brushColor {
+		width: 5vw;
+	}
+	input[type="range"]#brushSize {
+		height: 3vh;
+	}
 }

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../Week-3/Exercises/TODO-List/style/TODO-List.css">
+		<link rel="stylesheet" href="../../Week-3/Exercises/An-Interactive-Paint-Canvas/style/An-Interactive-Paint-Canvas.css"> 
+		<link rel="stylesheet" href="../../Week-3/Exercises/Image-Upload-and-Display/style/Image-Upload-and-Display.css">
+		<script src="../../Week-3/Exercises/Image-Upload-and-Display/lib/SimpleImage.js"></script>
+		<script src="./script/Miniproject.js"></script>
+		<title>Image Upload and Display</title>
+	</head>
+	<body class="font-small font-medium">
+		<h1 class="headBox alignCenter">Duke University</h1>
+		<ul>
+			<li>
+				<h2 class="headBox">Java Programming and Software Engineering Fundamentals</h2>
+				<ul>
+					<li>
+						<h3 class="headBox">Programming Foundations with JavaScript, HTML and CSS</h3>
+						<ul>
+							<li>
+								<h4 class="headBox">Module 5</h4>
+								<ul>
+									<li>
+										<h5 class="headBox">Miniproject: Image Filter Fun!</h5>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="appBox alignCenter">
+			<h1 class="appHead textAlignCenter">Image Filter Fun!</h1>
+			<hr>
+			<form method="post" enctype="multipart/form-data">
+				<div class="inputTable">
+					<div class="inputTableCell fitContent">
+						<label for="fileInput">File Name:</label>
+					</div>
+					<div class="inputTableCell">
+						<input id="fileInput" type="file" oninput="upload()">
+					</div>
+				</div>
+			</form>
+			<hr>
+			<div class="inputTable">
+				<div class="inputTableRow">
+					<div class="inputTableCell floatLeft padding">
+						<input id="makeItGrayButton" type="button" value="Grayscale" onclick="makeItGray()">
+					</div>
+					<div class="inputTableCell floatLeft padding">
+						<input id="makeItRedButton" type="button" value="Red" onclick="makeItRed()">
+					</div>
+					<div class="inputTableCell floatLeft padding">
+						<input id="makeItGreenButton" type="button" value="Green" onclick="makeItGreen()">
+					</div>
+					<div class="inputTableCell floatLeft padding">
+						<input id="makeItBlueButton" type="button" value="Blue" onclick="makeItBlue()">
+					</div>
+				</div>
+				<div class="inputTableRow">
+					<div class="inputTableCell floatLeft padding">
+						<input id="clearFilters" type="button" value="Clear Filters" onclick="clearFilters()">
+					</div>
+				</div>
+			</div>
+			<hr>
+			<canvas id="uploadCanvas" class="alignCenter" width="640" height="480"></canvas>
+		</div>
+	</body>
+</html>
