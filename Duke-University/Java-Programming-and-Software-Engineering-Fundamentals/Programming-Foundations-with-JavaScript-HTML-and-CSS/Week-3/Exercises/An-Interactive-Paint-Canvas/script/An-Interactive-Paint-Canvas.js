@@ -27,14 +27,38 @@ function stopPainting() {
 	isPainting = false;
 }
 function doPaint(event) {
-	if (isPainting)
-		paintCircle(event.offsetX, event.offsetY);
+	if (isPainting) {
+		var paintCoord = calcPaintCoord(event);
+		paintCircle(paintCoord.x, paintCoord.y);
+	}
 }
 function touchPaint(event) {
 	if (isPainting) {
 		event.preventDefault();
-		paintCircle(event.touches[0].clientX - getCanvas().getBoundingClientRect().left, event.touches[0].clientY - getCanvas().getBoundingClientRect().top);
+		var paintCoord = calcPaintCoord(event);
+		paintCircle(paintCoord.x, paintCoord.y);
 	}
+}
+function calcPaintCoord(event) {
+	var x;
+	var y;
+	var canvas = getCanvas();
+	if (event.touches == undefined) {
+		x = event.offsetX;
+		y = event.offsetY;
+	} else {
+		var touch = event.touches[0];
+		var boundingClientRect = canvas.getBoundingClientRect();
+		x = touch.clientX - boundingClientRect.left;
+		y = touch.clientY - boundingClientRect.top;
+	}
+	var xScale = canvas.width / canvas.clientWidth;
+	var yScale = canvas.height / canvas.clientHeight;
+	if (xScale > 1)
+		x *= xScale;
+	if (yScale > 1)
+		y *= yScale;
+	return {x, y};
 }
 function getBrushSize() {
 	return document.getElementById("brushSize").value;
